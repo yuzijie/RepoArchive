@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<div class="row">
+  <div class="col-12 col-sm-12 col-lg-8">
+      <div class="well">
+      <h1>{{ page.title }} </h1>
+      <p class="muted">{{ page.date | date_to_long_string }}</p>
+      {{ content }}
+      </div>
+      {% include paginator-post.html %}
+  </div>
+  <div class="col-12 col-sm-12 col-lg-4">
+    {% include sidebar-post.html %}
+  </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,20 @@
+---
+layout: homepage
+---
+<div class="well">
+{% for post in paginator.posts %}
+
+<h3>{{ post.title | capitalize }} <small>{{ post.date | date_to_long_string }}</small></h3>
+<div class="post-content-truncate">
+    {% if post.content contains "<!-- more -->" %}
+        {{ post.content | split:"<!-- more -->" | first % }}
+    {% else %}
+        {{ post.content }}
+    {% endif %}
+</div>
+<p><a href="{{ post.url }}">Read the full post</a></p>
+
+{% endfor %}
+</div>
+
+{% include paginator-home.html %}

@@ -1,0 +1,17 @@
+name: "YU ZIJIE"
+description: "YU ZIJIE's personal website."
+url: "http://yuz.me"
+author: "YU ZIJIE"
+
+paginate: 6
+paginate_path: "page:num"
+
+markdown:  rdiscount
+permalink: pretty
+pygments:  true
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+exclude:     ['README.md','.DS_Store']
